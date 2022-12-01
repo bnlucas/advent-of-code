@@ -12,9 +12,9 @@ def run():
   calorie_groups = load_input()
   
   elves_calories = list(map(sum, calorie_groups))
-  elves_calories = sorted(elves_calories, reverse=True)
+  elves_calories.sort()
 
-  print(sum(elves_calories[:3]))
+  print(sum(elves_calories[-3:]))
 
 
 if __name__ == '__main__':
